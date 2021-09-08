@@ -1,0 +1,31 @@
+<!-- List of Users Card Starts -->
+<div class="container">
+    <div class="row listHeadingRow">
+        <div class="col-md-6">
+            <h4>List of Users</h4>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-outline-secondary addNewUserBtn" routerLink="/userform">Add New
+                User</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 cardSty" *ngFor="let user of usersList">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <a class="float-right deleteBtn" (click)="deleteUser(user.id)">
+                            <fa-icon [icon]="faTrash" aria-hidden="true"></fa-icon>
+                        </a>
+                    </div>
+                    <h5 class="card-title cardName" (click)="editUser(user)">{{user.name}}</h5>
+                    <p class="card-text emailSty">{{user.email}}</p>
+                    <p class="card-text">{{user.phone}}</p>
+                    <p class="card-text websiteSty">{{user.website}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- List of Users Card Ends -->

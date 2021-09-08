@@ -1,0 +1,52 @@
+<!-- User Form Starts -->
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4>User Form</h4>
+                <div class="form-group">
+                    <label for="nameInput">Name<span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Please enter name"
+                        formControlName="name">
+                    <span class="text-danger"
+                        *ngIf="(userFormControls.name.touched || submitted) && userFormControls.name.errors?.required">
+                        Name is required
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="emailInput">Email Address<span class="mandatory">*</span></label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Please enter email address"
+                        formControlName="email">
+                    <span class="text-danger"
+                        *ngIf="(userFormControls.email.touched || submitted) && userFormControls.email.errors?.required">
+                        Email is required
+                    </span>
+                    <span class="text-danger" *ngIf="((userFormControls.email.touched || submitted) && userFormControls.email.errors?.email) ||
+                 (userFormControls.email.touched || submitted) && userFormControls.email.errors?.pattern">
+                        Enter Valid Email
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="phoneInput">Phone Number<span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" (keypress)="numberOnly($event)" id="phoneInput"
+                        placeholder="Please enter phone number" formControlName="phone">
+                    <span class="text-danger"
+                        *ngIf="(userFormControls.phone.touched || submitted) && userFormControls.phone.errors?.required">
+                        Phone Number is required
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="websiteInput">Website</label>
+                    <input type="text" class="form-control" id="websiteInput" placeholder="Please enter website"
+                        formControlName="website">
+                </div>
+                <button class="btn btnCustom" type="button" (click)="backUserList()">Back to Users List</button>
+                |
+                <button class="btn submitBtn" type="submit">Submit</button>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</form>
+<!-- User Form Ends -->

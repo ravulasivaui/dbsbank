@@ -1,0 +1,41 @@
+.container{
+  padding-top: 2%;
+}
+.listHeadingRow{
+  margin-bottom: 10px;
+}
+h4{
+  color: #EF1C24;
+}
+.card-title{
+  color: #660101;
+}
+.emailSty{
+  color: #220201;
+}
+.websiteSty{
+  color: #3C860B;
+}
+.deleteBtn{
+  color: #EF1C24 !important;
+  cursor: pointer;
+}
+.cardSty{
+    margin-bottom: 15px;
+}
+.cardName{
+    cursor: pointer;
+}
+.addNewUserBtn{
+  float: right;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.noRecords{
+  color: #EF1C24;
+  font-weight: 500;
+}
+
+

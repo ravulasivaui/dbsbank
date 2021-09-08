@@ -1,0 +1,17 @@
+.mandatory {
+    color: red;
+}
+.btnCustom{
+    background-color: #134F5C !important;
+    color: #ffffff;
+    border-color: #134F5C !important;
+}
+.submitBtn{
+    background-color: #EE1818 !important;
+    color: #ffffff;
+    border-color: #EE1818 !important;
+}
+h4{
+    color: #EF1C24;
+    margin-top: 10px;
+}
